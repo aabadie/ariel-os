@@ -9,6 +9,9 @@ pub mod gpio;
 
 pub mod peripherals;
 
+#[cfg(context = "scum")]
+mod vectors;
+
 #[doc(hidden)]
 pub mod identity {
     use ariel_os_embassy_common::identity;
@@ -37,8 +40,22 @@ impl<T> IntoPeripheral<'_, T> for T {
 #[doc(hidden)]
 #[must_use]
 pub fn init() -> OptionalPeripherals {
-    // Milestone 2 will initialize and calibrate the chip here, before any
-    // driver is set up, by calling into the SCuM SDK C code:
-    // initialize_mote() then perform_calibration().
+    // The chip must be initialized and calibrated before any driver is set
+    // up: all SCuM clocks are on-chip oscillators that the optical
+    // calibration tunes at every boot. The calibration is driven by the
+    // programmer LED sequence (scum-programmer --calibrate) and blocks
+    // until complete.
+    #[cfg(context = "scum")]
+    {
+        #![expect(unsafe_code, reason = "one-time chip initialization FFI")]
+        // SAFETY: called once at startup, before any driver is set up; the
+        // vector table (src/vectors.rs) wires the optical calibration
+        // interrupts to the SDK handler, as these functions require.
+        unsafe {
+            scum_sdk_sys::initialize_mote();
+            scum_sdk_sys::perform_calibration();
+        }
+    }
+
     OptionalPeripherals::new()
 }

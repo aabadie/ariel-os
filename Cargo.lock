@@ -540,8 +540,10 @@ name = "ariel-os-scum"
 version = "0.5.0"
 dependencies = [
  "ariel-os-embassy-common",
+ "cortex-m-rt",
  "embedded-hal 1.0.0",
  "embedded-hal-async",
+ "scum-sdk-sys",
 ]
 
 [[package]]
@@ -5610,6 +5612,13 @@ dependencies = [
  "portable-atomic",
  "ringbuf",
  "try-lock-portable-atomic",
+]
+
+[[package]]
+name = "scum-sdk-sys"
+version = "0.1.0"
+dependencies = [
+ "cc",
 ]
 
 [[package]]

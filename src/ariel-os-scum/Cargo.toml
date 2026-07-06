@@ -8,8 +8,10 @@ license.workspace = true
 
 [dependencies]
 ariel-os-embassy-common = { workspace = true }
+cortex-m-rt = { workspace = true, features = ["device"] }
 embedded-hal = { workspace = true }
 embedded-hal-async = { workspace = true }
+scum-sdk-sys = { path = "../lib/scum-sdk-sys" }
 
 [lints]
 workspace = true
