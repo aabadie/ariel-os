@@ -355,6 +355,7 @@ dependencies = [
  "ariel-os-native",
  "ariel-os-nrf",
  "ariel-os-rp",
+ "ariel-os-scum",
  "ariel-os-stm32",
  "bt-hci",
  "const_panic",
@@ -532,6 +533,15 @@ version = "0.5.0"
 dependencies = [
  "defmt 1.1.0",
  "hax-lib",
+]
+
+[[package]]
+name = "ariel-os-scum"
+version = "0.5.0"
+dependencies = [
+ "ariel-os-embassy-common",
+ "embedded-hal 1.0.0",
+ "embedded-hal-async",
 ]
 
 [[package]]

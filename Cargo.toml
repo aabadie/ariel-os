@@ -19,6 +19,7 @@ members = [
   "src/ariel-os-power",
   "src/ariel-os-random",
   "src/ariel-os-rp",
+  "src/ariel-os-scum",
   "src/ariel-os-sensors",
   "src/ariel-os-sensors-gnss-time-ext",
   "src/ariel-os-sensors-registry",

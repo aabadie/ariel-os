@@ -1,0 +1,15 @@
+[package]
+name = "ariel-os-scum"
+version = "0.5.0"
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+license.workspace = true
+
+[dependencies]
+ariel-os-embassy-common = { workspace = true }
+embedded-hal = { workspace = true }
+embedded-hal-async = { workspace = true }
+
+[lints]
+workspace = true

@@ -50,6 +50,9 @@ cfg_select! {
     context = "stm32" => {
         pub use ariel_os_stm32::*;
     }
+    context = "scum" => {
+        pub use ariel_os_scum::*;
+    }
     context = "ariel-os" => {
         compile_error!("this MCU family is not supported");
     }

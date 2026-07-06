@@ -758,6 +758,20 @@ contexts:
       RUSTFLAGS:
         - --cfg capability=\"hw/stm32-rng\"
 
+  # SCuM (Single Chip micro Mote), see https://www.crystalfree.org/.
+  # The chip has no flash: the firmware is loaded into memory at each boot
+  # through the scum-programmer tool (no probe-rs, no RTT; UART console only).
+  - name: scum
+    help: SCuM (Single Chip micro Mote) support
+    parent: ariel-os
+    selects:
+      - cortex-m0
+      - single-core
+      - ram-small
+    env:
+      CARGO_RUNNER:
+        - ${SCRIPTS}/scum-flash.sh
+
 modules:
   - name: thumbv6m-none-eabi
     env:
@@ -2161,6 +2175,11 @@ modules:
           - ariel-os/nrf-radiocore-firmware-dect
 
 builders:
+  # SCuM development kit (out-of-tree demo port, not part of the generated
+  # board support in src/ariel-os-boards).
+  - name: scum-devkit
+    parent: scum
+
   # host builder (for housekeeping tasks)
   - name: host
     rules:
