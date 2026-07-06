@@ -7,7 +7,14 @@
 
 pub mod gpio;
 
+pub mod irqs;
+
 pub mod peripherals;
+
+#[cfg(feature = "time")]
+mod time_driver;
+
+pub mod uart;
 
 #[cfg(context = "scum")]
 mod vectors;
@@ -56,6 +63,11 @@ pub fn init() -> OptionalPeripherals {
             scum_sdk_sys::perform_calibration();
         }
     }
+
+    // The RF timer frequency depends on the calibrated clocks, so the time
+    // driver is only initialized once the calibration completed.
+    #[cfg(feature = "time")]
+    time_driver::init();
 
     OptionalPeripherals::new()
 }

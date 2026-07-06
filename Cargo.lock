@@ -540,7 +540,11 @@ name = "ariel-os-scum"
 version = "0.5.0"
 dependencies = [
  "ariel-os-embassy-common",
+ "cortex-m",
  "cortex-m-rt",
+ "critical-section",
+ "embassy-time-driver",
+ "embassy-time-queue-utils",
  "embedded-hal 1.0.0",
  "embedded-hal-async",
  "scum-sdk-sys",

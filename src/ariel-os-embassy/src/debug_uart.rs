@@ -6,6 +6,8 @@ type UartDriver = embassy_nrf::uarte::Uarte<'static>;
 type UartDriver = embassy_rp::uart::Uart<'static, embassy_rp::uart::Blocking>;
 #[cfg(context = "stm32")]
 type UartDriver = embassy_stm32::usart::Uart<'static, embassy_stm32::mode::Blocking>;
+#[cfg(context = "scum")]
+type UartDriver = crate::hal::uart::Uart;
 
 static DEBUG_UART: embassy_sync::once_lock::OnceLock<
     embassy_sync::mutex::Mutex<
@@ -17,14 +19,26 @@ static DEBUG_UART: embassy_sync::once_lock::OnceLock<
 #[expect(clippy::missing_panics_doc)]
 pub fn init(peripherals: &mut crate::hal::OptionalPeripherals) {
     // TODO: this could later be replaced with our UART abstraction and app configuration.
+    #[cfg(not(context = "scum"))]
     let uart = iot_lab::get_uart_driver(peripherals);
+
+    // The SCuM UART needs no configuration: the baud rate is fixed by the
+    // chip clocking.
+    #[cfg(context = "scum")]
+    let uart = crate::hal::uart::Uart::new(peripherals.UART0.take().unwrap());
 
     let _ = DEBUG_UART.init(embassy_sync::mutex::Mutex::new(uart));
 
     let _ = ariel_os_log::backend::DEBUG_UART_WRITE_FN.init(write_debug_uart);
 }
 
+/// Writes the buffer to the debug UART.
+///
+/// # Errors
+///
+/// Returns an error if writing to the UART fails.
 fn write_debug_uart(buffer: &[u8]) -> Result<(), ariel_os_log::backend::Error> {
+    #[cfg(not(context = "scum"))]
     use ariel_os_log::backend::Error;
 
     #[cfg(any(context = "rp", context = "stm32"))]
@@ -59,6 +73,9 @@ fn write_debug_uart(buffer: &[u8]) -> Result<(), ariel_os_log::backend::Error> {
                 // TODO: is flushing needed here?
                 uart.flush().map_err(|_| Error::Writing)?;
             }
+
+            #[cfg(context = "scum")]
+            uart.write_bytes(buffer);
         }
 
         Ok(())

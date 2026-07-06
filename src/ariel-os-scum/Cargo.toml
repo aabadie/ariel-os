@@ -8,10 +8,26 @@ license.workspace = true
 
 [dependencies]
 ariel-os-embassy-common = { workspace = true }
+cortex-m = { workspace = true, optional = true }
 cortex-m-rt = { workspace = true, features = ["device"] }
+critical-section = { workspace = true, optional = true }
+embassy-time-driver = { workspace = true, features = [
+  "tick-hz-1_000_000",
+], optional = true }
+embassy-time-queue-utils = { workspace = true, optional = true }
 embedded-hal = { workspace = true }
 embedded-hal-async = { workspace = true }
 scum-sdk-sys = { path = "../lib/scum-sdk-sys" }
+
+[features]
+## Enables a time driver, based on the RF timer.
+time = [
+  "dep:cortex-m",
+  "dep:critical-section",
+  "dep:embassy-time-driver",
+  "dep:embassy-time-queue-utils",
+  "embassy-time-queue-utils/_generic-queue",
+]
 
 [lints]
 workspace = true

@@ -1970,6 +1970,7 @@ modules:
       - nrf52840dk
       - nrf52dk
       - rp2040
+      - scum
       - stm32u083c-dk
     selects:
       - context::esp:
@@ -1989,6 +1990,7 @@ modules:
       - nrf52840dk
       - nrf52dk
       - rp2040
+      - scum
       - stm32u083c-dk
     selects:
       - log # We could later support defmt as well
