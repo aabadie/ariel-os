@@ -1,20 +1,21 @@
 version: 0.3.0
 targets:
-  dwm1001:
-    chip: nrf52832
+  dwm3001cdk:
+    chip: nrf52833
+    flags:
+      - has_usb_device_port
     leds:
       led0:
-        pin: P0_14
-        aliases:
-          - D12
-          - GPIO14
-        color: red
-        active: low
-      led1:
-        pin: P0_30
+        pin: P0_04
         aliases:
           - D9
         color: green
+        active: low
+      led1:
+        pin: P0_14
+        aliases:
+          - D12
+        color: red
         active: low
       led2:
         pin: P0_22
@@ -23,7 +24,7 @@ targets:
         color: red
         active: low
       led3:
-        pin: P0_31
+        pin: P0_05
         aliases:
           - D10
         color: blue
@@ -32,5 +33,5 @@ targets:
       button0:
         pin: P0_02
         aliases:
-          - BT_WAKE_UP
+          - SW2
         active: low
