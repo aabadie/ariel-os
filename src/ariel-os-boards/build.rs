@@ -1,49 +1,27 @@
 // @generated
 
 pub fn main() {
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"adafruit-feather-nrf52840-express\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"adafruit-feather-nrf52840-sense\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"adafruit-feather-nrf52840-express\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"adafruit-feather-nrf52840-sense\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"arduino-uno-q\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"bbc-microbit-v1\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"bbc-microbit-v2\"))");
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"dfrobot-firebeetle2-esp32-c6\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"dfrobot-firebeetle2-esp32-c6\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"dwm1001\"))");
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-c3-devkit-rust-1\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-c3-lcdkit\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-c6-devkitc-1\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-c3-devkit-rust-1\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-c3-lcdkit\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-c6-devkitc-1\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-devkitc\"))");
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-s2-devkitc-1\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-s3-devkitc-1\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-s2-devkitc-1\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"espressif-esp32-s3-devkitc-1\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"heltec-wifi-lora-32-v3\"))");
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"makerdiary-nrf52840-mdk-usb-dongle\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"iotlab-a8-m3\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"iotlab-m3\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"makerdiary-nrf52840-mdk-usb-dongle\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"native\"))");
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"nordic-thingy-91-x-nrf9151\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"nordic-thingy-91-x-nrf5340-app\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"nordic-thingy-91-x-nrf5340-net\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"nordic-thingy-91-x-nrf9151\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"nordic-thingy-91-x-nrf5340-app\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"nordic-thingy-91-x-nrf5340-net\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"nrf52840-mdk\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"nrf52840dk\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"nrf52dk\"))");
@@ -56,15 +34,9 @@ pub fn main() {
     println!("cargo::rustc-check-cfg=cfg(context, values(\"rpi-pico\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"rpi-pico2-w\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"rpi-pico2\"))");
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"seeedstudio-lora-e5-mini\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"seeedstudio-xiao-esp32c6\"))"
-    );
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"seeedstudio-xiao-nrf52840-plus\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"seeedstudio-lora-e5-mini\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"seeedstudio-xiao-esp32c6\"))");
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"seeedstudio-xiao-nrf52840-plus\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"st-b-l475e-iot01a\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"st-nucleo-c031c6\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"st-nucleo-f042k6\"))");
@@ -82,7 +54,5 @@ pub fn main() {
     println!("cargo::rustc-check-cfg=cfg(context, values(\"stm32u083c-dk\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"ulanzi-tc001\"))");
     println!("cargo::rustc-check-cfg=cfg(context, values(\"unihiker-k10\"))");
-    println!(
-        "cargo::rustc-check-cfg=cfg(context, values(\"waveshare-esp32-s3-matrix\"))"
-    );
+    println!("cargo::rustc-check-cfg=cfg(context, values(\"waveshare-esp32-s3-matrix\"))");
 }
