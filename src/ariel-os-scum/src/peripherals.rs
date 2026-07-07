@@ -1,5 +1,7 @@
 //! Types for the peripheral singletons.
 
+use crate::peripheral::Peri;
+
 macro_rules! define_peripherals {
     ($($(#[$doc:meta])* $name:ident),* $(,)?) => {
         $(
@@ -15,7 +17,7 @@ macro_rules! define_peripherals {
         pub struct OptionalPeripherals {
             $(
                 $(#[$doc])*
-                pub $name: Option<$name>,
+                pub $name: Option<Peri<'static, $name>>,
             )*
         }
 
@@ -24,7 +26,7 @@ macro_rules! define_peripherals {
             #[must_use]
             pub fn new() -> Self {
                 Self {
-                    $($name: Some($name { _private: () }),)*
+                    $($name: Some(Peri::new($name { _private: () })),)*
                 }
             }
         }

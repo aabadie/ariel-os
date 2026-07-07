@@ -10,7 +10,7 @@ const UART_DATA: *mut u32 = 0x5100_0000 as *mut u32;
 
 /// Blocking UART driver.
 pub struct Uart {
-    _uart0: crate::peripherals::UART0,
+    _uart0: crate::peripheral::Peri<'static, crate::peripherals::UART0>,
 }
 
 impl Uart {
@@ -19,7 +19,7 @@ impl Uart {
     /// No configuration is needed: the baud rate is fixed by the chip
     /// clocking.
     #[must_use]
-    pub fn new(uart0: crate::peripherals::UART0) -> Self {
+    pub fn new(uart0: crate::peripheral::Peri<'static, crate::peripherals::UART0>) -> Self {
         Self { _uart0: uart0 }
     }
 

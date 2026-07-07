@@ -2181,6 +2181,10 @@ builders:
   # board support in src/ariel-os-boards).
   - name: scum-devkit
     parent: scum
+    provides:
+      # The devkit has no onboard user LED; led0 is GPIO0, to be wired to
+      # an external LED.
+      - has_leds
 
   # host builder (for housekeeping tasks)
   - name: host

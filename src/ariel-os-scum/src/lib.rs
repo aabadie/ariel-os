@@ -26,22 +26,29 @@ pub mod identity {
     pub type DeviceId = identity::NoDeviceId<identity::NotImplemented>;
 }
 
-#[doc(hidden)]
-pub mod peripheral {}
+pub mod peripheral;
 
 #[doc(hidden)]
 pub use peripherals::OptionalPeripherals;
 
-#[doc(hidden)]
-pub trait IntoPeripheral<'a, T> {
-    fn into_hal_peripheral(self) -> T;
-}
+use peripheral::Peri;
 
 #[doc(hidden)]
-impl<T> IntoPeripheral<'_, T> for T {
-    fn into_hal_peripheral(self) -> T {
+pub trait IntoPeripheral<'a, T>: private::Sealed {
+    fn into_hal_peripheral(self) -> Peri<'a, T>;
+}
+
+impl<T> private::Sealed for Peri<'_, T> {}
+
+#[doc(hidden)]
+impl<'a, T> IntoPeripheral<'a, T> for Peri<'a, T> {
+    fn into_hal_peripheral(self) -> Peri<'a, T> {
         self
     }
+}
+
+mod private {
+    pub trait Sealed {}
 }
 
 #[doc(hidden)]
