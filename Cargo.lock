@@ -4165,8 +4165,11 @@ version = "0.0.0"
 dependencies = [
  "ariel-os",
  "ariel-os-boards",
+ "embassy-stm32",
  "embassy-sync 0.7.2",
+ "embedded-hal-async",
  "lora-phy",
+ "static_cell",
 ]
 
 [[package]]
@@ -4175,8 +4178,11 @@ version = "0.0.0"
 dependencies = [
  "ariel-os",
  "ariel-os-boards",
+ "embassy-stm32",
  "embassy-sync 0.7.2",
+ "embedded-hal-async",
  "lora-phy",
+ "static_cell",
 ]
 
 [[package]]
