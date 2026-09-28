@@ -1141,7 +1141,7 @@ chips:
       debug_channel: supported
       hwrng: supported
       i2c_controller: not_currently_supported
-      spi_main: not_currently_supported
+      spi_main: supported
       uart: needs_testing
       logging: supported
       storage:

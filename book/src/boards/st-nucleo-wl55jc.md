@@ -28,7 +28,7 @@ laze build -b st-nucleo-wl55jc
 |Logging|<span title="supported">✅</span>|
 |GPIO|<span title="supported">✅</span>|
 |I2C Controller Mode|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>|
-|SPI Main Mode|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>|
+|SPI Main Mode|<span title="supported">✅</span>|
 |UART|<span title="needs testing">🚦</span>|
 |Ethernet|<span title="not available on this piece of hardware">–</span>|
 |User USB|<span title="not available on this piece of hardware">–</span>|
