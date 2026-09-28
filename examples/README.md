@@ -11,6 +11,7 @@ This directory contains example applications that showcase how to use Ariel OS.
 - [blinky/](./blinky): Demonstrates basic GPIO output usage
 - [coap-server](./coap-server) and [coap-client](./coap-client): Application level networking examples
 - [device-metadata/](./device-metadata): Retrieve metadata about the running device
+- [display/](./display): Draws on the FMC-connected LCD of the STM32F723E-DISCO
 - [gpio/](./gpio): GPIO pin control example.
 - [gpio-reuse/](./gpio-reuse): Change GPIO role at runtime
 - [hello-world/](./hello-world): A classic, async version

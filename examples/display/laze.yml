@@ -1,0 +1,5 @@
+apps:
+  - name: display
+    context:
+      # The display is wired to the FMC on this board only.
+      - stm32f723e-disco
