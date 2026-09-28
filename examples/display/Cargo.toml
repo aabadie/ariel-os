@@ -1,0 +1,15 @@
+[package]
+name = "display"
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[dependencies]
+ariel-os = { path = "../../src/ariel-os", features = ["time"] }
+ariel-os-boards = { path = "../../src/ariel-os-boards" }
+ariel-os-stm32-fmc-display = { workspace = true }
+embedded-graphics = { workspace = true }
+heapless = { workspace = true }
+
+[lints]
+workspace = true
