@@ -1,0 +1,18 @@
+[package]
+name = "ariel-os-stm32-fmc-display"
+# This crate is versioned separately from Ariel OS.
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+license.workspace = true
+description = "Support for displays connected to the FMC of STM32 MCUs"
+
+[dependencies]
+cortex-m = { workspace = true }
+embassy-stm32 = { workspace = true, features = ["unstable-pac"] }
+embedded-hal = { workspace = true }
+mipidsi = { workspace = true }
+
+[lints]
+workspace = true

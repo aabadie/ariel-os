@@ -26,6 +26,7 @@ members = [
   "src/ariel-os-sensors-registry",
   "src/ariel-os-sensors-utils",
   "src/ariel-os-stm32",
+  "src/ariel-os-stm32-fmc-display",
   "src/ariel-os-storage",
   "src/ariel-os-update-transports",
   "src/lib/coapcore",
@@ -96,6 +97,7 @@ embassy-time-driver = { version = "0.2.2", default-features = false }
 embassy-time-queue-utils = { version = "0.3.2", default-features = false }
 embassy-usb = { version = "0.6.0", default-features = false }
 
+embedded-graphics = { version = "0.8.2", default-features = false }
 embedded-hal = { version = "1.0.0", default-features = false }
 embedded-hal-async = { version = "1.0.0", default-features = false }
 embedded-io = { version = "0.7.0", default-features = false }
@@ -122,6 +124,7 @@ esp-sync = { version = "0.2.1", default-features = false }
 xtensa-lx-rt = { version = "0.22.0", default-features = false }
 
 linkme = { version = "0.3.32" }
+mipidsi = { version = "0.10.0" }
 
 ariel-os = { path = "src/ariel-os", default-features = false }
 ariel-os-alloc = { path = "src/ariel-os-alloc", default-features = false }
@@ -152,6 +155,7 @@ ariel-os-sensors-registry = { path = "src/ariel-os-sensors-registry" }
 ariel-os-sensors-utils = { path = "src/ariel-os-sensors-utils" }
 ariel-os-stm32 = { path = "src/ariel-os-stm32" }
 ariel-os-stm32-mapping = { path = "src/ariel-os-stm32-mapping" }
+ariel-os-stm32-fmc-display = { path = "src/ariel-os-stm32-fmc-display" }
 ariel-os-storage = { path = "src/ariel-os-storage" }
 ariel-os-threads = { path = "src/ariel-os-threads" }
 ariel-os-utils = { path = "src/ariel-os-utils", default-features = false }
