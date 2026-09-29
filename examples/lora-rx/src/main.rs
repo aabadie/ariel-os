@@ -1,19 +1,16 @@
 //! LoRa receive (raw PHY) example.
 //!
-//! This example uses the HAL-agnostic [`lora_phy`] driver to listen for LoRa packets continuously
+//! This example uses the HAL-agnostic `lora-phy` driver to listen for LoRa packets continuously
 //! and log each one it receives. It is the companion of the `lora-tx` example: run `lora-tx` on a
 //! second board tuned to the same frequency and modulation parameters to see packets arrive here.
-//! The board-specific radio setup is in the [`radio`] module.
+//! The board-specific radio setup is provided by `ariel_os::lora`.
 #![no_main]
 #![no_std]
 // "LoRa", "SX1276" and similar domain terms trip the doc_markdown lint.
 #![allow(clippy::doc_markdown)]
 
-mod pins;
-mod radio;
-
 use ariel_os::log::info;
-use lora_phy::{
+use ariel_os::lora::lora_phy::{
     RxMode,
     mod_params::{Bandwidth, CodingRate, SpreadingFactor},
 };
@@ -26,8 +23,8 @@ const LORA_FREQUENCY_IN_HZ: u32 = 868_100_000;
 const MAX_PAYLOAD_LEN: u8 = 64;
 
 #[ariel_os::task(autostart, peripherals)]
-async fn main(peripherals: pins::Peripherals) {
-    let mut lora = radio::init(peripherals).await;
+async fn main(peripherals: ariel_os::lora::Peripherals) {
+    let mut lora = ariel_os::lora::init(peripherals).await.unwrap();
 
     // These must match the transmitter's parameters exactly.
     let modulation = lora

@@ -1,6 +1,4 @@
 apps:
   - name: lora-tx
-    context:
-      # Boards with a LoRa radio set up in `src/radio.rs`.
-      - st-b-l072z-lrwan1
-      - st-nucleo-wl55jc
+    selects:
+      - lora

@@ -12,7 +12,8 @@ Supported boards:
 - ST NUCLEO-WL55JC: sub-GHz radio (SX126x-compatible) embedded in the STM32WL,
   controlled through the internal `SUBGHZSPI` bus, using the low-power PA.
 
-The board-specific radio setup is in `src/radio.rs`.
+The board-specific radio setup is provided by `ariel_os::lora` (the
+`ariel-os-lora` crate, enabled by the `lora` laze module).
 
 It listens continuously and logs every LoRa packet it receives, along with its
 RSSI and SNR. It is the companion of the `lora-tx` example: flash `lora-tx` on a
