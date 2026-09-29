@@ -35,6 +35,7 @@ laze build -b st-nucleo-wba65ri
 |Ethernet over USB|<span title="needs testing">🚦</span>|
 |Wi-Fi|<span title="not available on this piece of hardware">–</span>|
 |Bluetooth Low Energy|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>|
+|LoRa|<span title="not available on this piece of hardware">–</span>|
 |Hardware Random Number Generator|<span title="supported">✅</span>|
 |Persistent Storage|<span title="supported with some caveats">☑️</span>[^removing-items-not-supported]|
 

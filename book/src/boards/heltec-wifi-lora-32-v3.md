@@ -35,6 +35,7 @@ laze build -b heltec-wifi-lora-32-v3
 |Ethernet over USB|<span title="not available on this piece of hardware">–</span>|
 |Wi-Fi|<span title="supported">✅</span>|
 |Bluetooth Low Energy|<span title="supported">✅</span>|
+|LoRa|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^an-sx1262-lora-radio-is-present-on-the-board]|
 |Hardware Random Number Generator|<span title="supported">✅</span>|
 |Persistent Storage|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^requires-partitioning-support]|
 
@@ -65,4 +66,5 @@ dt, dd {
 
 
   
+[^an-sx1262-lora-radio-is-present-on-the-board]: An SX1262 LoRa radio is present on the board.
 [^requires-partitioning-support]: Requires partitioning support.

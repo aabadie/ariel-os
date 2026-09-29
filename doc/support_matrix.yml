@@ -68,6 +68,10 @@ functionalities:
     title: Bluetooth Low Energy
     support_criteria: ble-scanner
     description:
+  - name: lora
+    title: LoRa
+    support_criteria: lora
+    description: LoRa radio
   - name: hwrng
     title: Hardware Random Number Generator
     support_criteria: test-random-getrandom
@@ -138,6 +142,7 @@ chips:
       ethernet: not_available
       user_usb: not_currently_supported
       ethernet_over_usb: not_currently_supported
+      lora: not_available
 
   nrf51822-xxaa:
     name: nRF51822-xxAA
@@ -156,6 +161,7 @@ chips:
       ethernet: not_available
       user_usb: not_available
       ethernet_over_usb: not_available
+      lora: not_available
 
   nrf52832:
     name: nRF52832
@@ -174,6 +180,7 @@ chips:
       ethernet: not_available
       user_usb: not_available
       ethernet_over_usb: not_available
+      lora: not_available
 
   nrf52833:
     name: nRF52833
@@ -192,6 +199,7 @@ chips:
       ble: supported
       ethernet: not_available
       user_usb: needs_testing
+      lora: not_available
 
   nrf52840:
     name: nRF52840
@@ -208,6 +216,7 @@ chips:
       wifi: not_available
       ble: supported
       ethernet: not_available
+      lora: not_available
 
   nrf5340-app:
     name: nRF5340 application core
@@ -227,6 +236,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   nrf5340-net:
     name: nRF5340 network core
@@ -248,6 +258,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   nrf9151:
     name: nRF9151
@@ -269,6 +280,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   nrf9160:
     name: nRF9160
@@ -290,6 +302,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   rp2040:
     name: RP2040
@@ -306,6 +319,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   rp235xa:
     name: RP235xA
@@ -325,6 +339,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   esp32-d0wd:
     name: ESP32-D0WD
@@ -347,6 +362,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   esp32c2:
     name: ESP32-C2
@@ -369,6 +385,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32c2.
   esp8684h2:
@@ -392,6 +409,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32c2.
   esp8684h4:
@@ -415,6 +433,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   esp32c3:
     name: ESP32-C3
@@ -440,6 +459,7 @@ chips:
           - no generic USB peripheral
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32c3.
   esp32c3fx4:
@@ -466,6 +486,7 @@ chips:
           - no generic USB peripheral
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   esp32c6:
     name: ESP32-C6
@@ -491,6 +512,7 @@ chips:
           - no generic USB peripheral
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32c6.
   esp32c6fx4:
@@ -517,6 +539,7 @@ chips:
           - no generic USB peripheral
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   esp32h2:
     name: ESP32-H2
@@ -541,6 +564,7 @@ chips:
           - no generic USB peripheral
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32h2.
   esp32h2fh2s:
@@ -566,6 +590,7 @@ chips:
           - no generic USB peripheral
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32h2.
   esp32h2fh4s:
@@ -591,6 +616,7 @@ chips:
           - no generic USB peripheral
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   esp32s2:
     name: ESP32-S2
@@ -612,6 +638,7 @@ chips:
       wifi: supported
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32s2.
   esp32s2fx2:
@@ -634,6 +661,7 @@ chips:
       wifi: supported
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32s2.
   esp32s2fx4:
@@ -656,6 +684,7 @@ chips:
       wifi: supported
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32s2.
   esp32s2fx4r2:
@@ -678,6 +707,7 @@ chips:
       wifi: supported
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   esp32s3:
     name: ESP32-S3
@@ -699,6 +729,7 @@ chips:
       wifi: supported
       ble: supported
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32s3.
   esp32s3fx8:
@@ -721,6 +752,7 @@ chips:
       wifi: supported
       ble: supported
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32s3.
   esp32s3fx4r2:
@@ -743,6 +775,7 @@ chips:
       wifi: supported
       ble: supported
       ethernet: not_available
+      lora: not_available
 
   # Currently identical to esp32s3.
   esp32s3r8:
@@ -765,6 +798,7 @@ chips:
       wifi: supported
       ble: supported
       ethernet: not_available
+      lora: not_available
 
   stm32c031c6:
     name: STM32C031C6
@@ -786,6 +820,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   stm32f042k6:
     name: STM32F042K6
@@ -807,6 +842,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   stm32f303cb:
     name: STM32F303CB
@@ -828,6 +864,7 @@ chips:
       ble: not_available
       user_usb: supported
       ethernet: not_available
+      lora: not_available
 
   stm32f303re:
     name: STM32F303RE
@@ -849,6 +886,7 @@ chips:
       ble: not_available
       user_usb: needs_testing
       ethernet: not_available
+      lora: not_available
 
   stm32f401re:
     name: STM32F401RE
@@ -870,6 +908,7 @@ chips:
       ble: not_available
       user_usb: needs_testing
       ethernet: not_available
+      lora: not_available
 
   stm32f411re:
     name: STM32F411RE
@@ -894,6 +933,7 @@ chips:
         comments:
           - a more complete clock configuration needs to be provided
       ethernet: not_available
+      lora: not_available
 
   stm32g431rb:
     name: STM32G431RB
@@ -912,6 +952,7 @@ chips:
       ble: not_available
       user_usb: needs_testing
       ethernet: not_available
+      lora: not_available
 
   stm32h753zi:
     name: STM32H753ZI
@@ -938,6 +979,7 @@ chips:
           - removing items not supported
       wifi: not_available
       ble: not_available
+      lora: not_available
 
   stm32h755zi:
     name: STM32H755ZI
@@ -964,6 +1006,7 @@ chips:
           - removing items not supported
       wifi: not_available
       ble: not_available
+      lora: not_available
 
   stm32l072cz:
     name: STM32L072CZ
@@ -985,6 +1028,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   stm32l475vg:
     name: STM32L475VG
@@ -1008,6 +1052,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   stm32u073kc:
     name: STM32U073KC
@@ -1029,6 +1074,7 @@ chips:
       ble: not_available
       ethernet: not_available
       user_usb: supported
+      lora: not_available
 
   stm32u083mc:
     name: STM32U083MC
@@ -1048,6 +1094,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   stm32u585ai:
     name: STM32U585AI
@@ -1071,6 +1118,7 @@ chips:
       wifi: not_available
       ble: not_available
       ethernet: not_available
+      lora: not_available
 
   stm32wb55rg:
     name: STM32WB55RG
@@ -1090,6 +1138,7 @@ chips:
       wifi: not_available
       ble: not_currently_supported
       ethernet: not_available
+      lora: not_available
 
   stm32wba55cg:
     name: STM32WBA55CG
@@ -1111,6 +1160,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_available
 
   stm32wba65ri:
     name: STM32WBA65RI
@@ -1132,6 +1182,7 @@ chips:
       user_usb: needs_testing
       ethernet_over_usb: needs_testing
       ethernet: not_available
+      lora: not_available
 
   stm32wl55jc:
     name: STM32WL55JC
@@ -1153,6 +1204,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: supported
 
   stm32wle5jc:
     name: STM32WLE5JC
@@ -1174,6 +1226,7 @@ chips:
       user_usb: not_available
       ethernet_over_usb: not_available
       ethernet: not_available
+      lora: not_currently_supported
 
 # Encodes support status for each laze builder.
 # laze builders inherit support statuses of their chip, but can also override them.
@@ -1420,6 +1473,10 @@ builders:
     chip: esp32s3
     tier: "3"
     support:
+      lora:
+        status: not_currently_supported
+        comments:
+          - an SX1262 LoRa radio is present on the board
       user_usb: not_available
       ethernet_over_usb: not_available
 
@@ -1449,6 +1506,7 @@ builders:
     chip: stm32l072cz
     tier: "3"
     support:
+      lora: supported
       user_usb:
         status: needs_testing
         comments:

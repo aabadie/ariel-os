@@ -35,6 +35,7 @@ laze build -b st-nucleo-f042k6
 |Ethernet over USB|<span title="not available on this piece of hardware">–</span>|
 |Wi-Fi|<span title="not available on this piece of hardware">–</span>|
 |Bluetooth Low Energy|<span title="not available on this piece of hardware">–</span>|
+|LoRa|<span title="not available on this piece of hardware">–</span>|
 |Hardware Random Number Generator|<span title="not available on this piece of hardware">–</span>|
 |Persistent Storage|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^would-need-to-allocate-some-flash]|
 

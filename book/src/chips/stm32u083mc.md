@@ -19,6 +19,7 @@
 |Ethernet over USB|<span title="supported">✅</span>|
 |Wi-Fi|<span title="not available on this piece of hardware">–</span>|
 |Bluetooth Low Energy|<span title="not available on this piece of hardware">–</span>|
+|LoRa|<span title="not available on this piece of hardware">–</span>|
 |Hardware Random Number Generator|<span title="supported">✅</span>|
 |Persistent Storage|<span title="supported with some caveats">☑️</span>[^removing-items-not-supported]|
 
@@ -59,7 +60,7 @@ Boards using this chip.
   <thead>
     <tr>
       <th colspan="3">Board</th>
-      <th colspan="13">Functionality</th>
+      <th colspan="14">Functionality</th>
     </tr>
     <tr>
       <th>Manufacturer Name</th>
@@ -76,6 +77,7 @@ Boards using this chip.
       <th>Ethernet over USB</th>
       <th>Wi-Fi</th>
       <th>Bluetooth Low Energy</th>
+      <th>LoRa</th>
       <th>Hardware Random Number Generator</th>
       <th>Persistent Storage</th>
     </tr>
@@ -97,6 +99,7 @@ Boards using this chip.
 		  <td class="support-cell" title="not available on this piece of hardware">–</td>
 		  <td class="support-cell" title="supported">✅</td>
 		  <td class="support-cell" title="supported">✅</td>
+		  <td class="support-cell" title="not available on this piece of hardware">–</td>
 		  <td class="support-cell" title="not available on this piece of hardware">–</td>
 		  <td class="support-cell" title="not available on this piece of hardware">–</td>
 		  <td class="support-cell" title="supported">✅</td>

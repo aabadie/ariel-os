@@ -35,6 +35,7 @@ laze build -b nordic-thingy-91-x-nrf9151
 |Ethernet over USB|<span title="not available on this piece of hardware">–</span>|
 |Wi-Fi|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^requires-supporting-the-onboard-nrf7002-chip]|
 |Bluetooth Low Energy|<span title="not available on this piece of hardware">–</span>|
+|LoRa|<span title="not available on this piece of hardware">–</span>|
 |Hardware Random Number Generator|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^only-available-through-the-cryptocell]|
 |Persistent Storage|<span title="supported">✅</span>|
 
@@ -65,6 +66,7 @@ laze build -b nordic-thingy-91-x-nrf5340-app
 |Ethernet over USB|<span title="supported">✅</span>|
 |Wi-Fi|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^requires-supporting-the-onboard-nrf7002-chip]|
 |Bluetooth Low Energy|<span title="not available on this piece of hardware">–</span>|
+|LoRa|<span title="not available on this piece of hardware">–</span>|
 |Hardware Random Number Generator|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^no-standalone-rng-in-the-application-core-only-in-the-cryptocell-which-is-not-currently-supported]|
 |Persistent Storage|<span title="supported">✅</span>|
 
@@ -95,6 +97,7 @@ laze build -b nordic-thingy-91-x-nrf5340-net
 |Ethernet over USB|<span title="not available on this piece of hardware">–</span>|
 |Wi-Fi|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^requires-supporting-the-onboard-nrf7002-chip]|
 |Bluetooth Low Energy|<span title="supported">✅</span>|
+|LoRa|<span title="not available on this piece of hardware">–</span>|
 |Hardware Random Number Generator|<span title="supported">✅</span>|
 |Persistent Storage|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>|
 

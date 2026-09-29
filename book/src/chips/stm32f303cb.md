@@ -19,6 +19,7 @@
 |Ethernet over USB|<span title="needs testing">🚦</span>|
 |Wi-Fi|<span title="not available on this piece of hardware">–</span>|
 |Bluetooth Low Energy|<span title="not available on this piece of hardware">–</span>|
+|LoRa|<span title="not available on this piece of hardware">–</span>|
 |Hardware Random Number Generator|<span title="not available on this piece of hardware">–</span>|
 |Persistent Storage|<span title="needs testing">🚦</span>[^removing-items-not-supported]|
 

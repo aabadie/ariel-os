@@ -35,6 +35,7 @@ laze build -b st-b-l072z-lrwan1
 |Ethernet over USB|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>[^not-enough-ram-for-the-network-stack]|
 |Wi-Fi|<span title="not available on this piece of hardware">–</span>|
 |Bluetooth Low Energy|<span title="not available on this piece of hardware">–</span>|
+|LoRa|<span title="supported">✅</span>|
 |Hardware Random Number Generator|<span title="supported">✅</span>|
 |Persistent Storage|<span title="available in hardware, but not currently supported by Ariel OS">❌</span>|
 
