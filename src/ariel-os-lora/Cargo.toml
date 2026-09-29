@@ -1,0 +1,25 @@
+[package]
+name = "ariel-os-lora"
+# This crate is versioned separately from Ariel OS.
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+license.workspace = true
+description = "LoRa radio support for Ariel OS boards"
+
+[dependencies]
+ariel-os-embassy = { workspace = true, features = ["external-interrupts", "spi"] }
+ariel-os-hal = { workspace = true, features = ["external-interrupts", "spi"] }
+embassy-sync = { workspace = true }
+embassy-time = { workspace = true }
+embedded-hal-async = { workspace = true }
+lora-phy = { workspace = true }
+static_cell = { workspace = true }
+
+[features]
+## Enables support for the sub-GHz radio of STM32WL MCUs.
+stm32wl = ["ariel-os-hal/lora-stm32wl"]
+
+[lints]
+workspace = true

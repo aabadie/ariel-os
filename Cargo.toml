@@ -15,6 +15,7 @@ members = [
   "src/ariel-os-hal",
   "src/ariel-os-identity",
   "src/ariel-os-log",
+  "src/ariel-os-lora",
   "src/ariel-os-macros",
   "src/ariel-os-nrf",
   "src/ariel-os-power",
@@ -146,6 +147,7 @@ ariel-os-sensors = { path = "src/ariel-os-sensors" }
 ariel-os-sensors-gnss-time-ext = { path = "src/ariel-os-sensors-gnss-time-ext" }
 ariel-os-sensors-registry = { path = "src/ariel-os-sensors-registry" }
 ariel-os-sensors-utils = { path = "src/ariel-os-sensors-utils" }
+ariel-os-lora = { path = "src/ariel-os-lora" }
 ariel-os-stm32 = { path = "src/ariel-os-stm32" }
 ariel-os-stm32-mapping = { path = "src/ariel-os-stm32-mapping" }
 ariel-os-storage = { path = "src/ariel-os-storage" }

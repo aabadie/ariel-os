@@ -143,6 +143,8 @@ wifi-esp = ["ariel-os-esp/wifi-esp"]
 
 ethernet-stm32 = ["ariel-os-stm32/ethernet-stm32"]
 
+lora-stm32wl = ["ariel-os-stm32/lora-stm32wl"]
+
 ltem-nrf-modem = ["ariel-os-nrf/ltem-nrf-modem"]
 
 ipv4 = ["ariel-os-nrf/ipv4"]

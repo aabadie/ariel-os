@@ -27,6 +27,9 @@ pub mod identity;
 #[cfg(feature = "spi")]
 pub mod spi;
 
+#[cfg(feature = "lora-stm32wl")]
+pub mod subghz;
+
 #[cfg(feature = "uart")]
 pub mod uart;
 

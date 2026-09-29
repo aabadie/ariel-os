@@ -86,6 +86,7 @@ dependencies = [
  "ariel-os-hal",
  "ariel-os-identity",
  "ariel-os-log",
+ "ariel-os-lora",
  "ariel-os-macros",
  "ariel-os-nrf",
  "ariel-os-power",
@@ -332,6 +333,19 @@ dependencies = [
  "esp-println",
  "featurecomb",
  "log",
+]
+
+[[package]]
+name = "ariel-os-lora"
+version = "0.1.0"
+dependencies = [
+ "ariel-os-embassy",
+ "ariel-os-hal",
+ "embassy-sync 0.7.2",
+ "embassy-time",
+ "embedded-hal-async",
+ "lora-phy",
+ "static_cell",
 ]
 
 [[package]]
@@ -599,6 +613,8 @@ dependencies = [
  "embassy-embedded-hal",
  "embassy-executor",
  "embassy-stm32",
+ "embassy-sync 0.7.2",
+ "embassy-time",
  "embedded-hal-async",
  "embedded-io-async 0.6.1",
  "paste",
@@ -4165,11 +4181,6 @@ version = "0.0.0"
 dependencies = [
  "ariel-os",
  "ariel-os-boards",
- "embassy-stm32",
- "embassy-sync 0.7.2",
- "embedded-hal-async",
- "lora-phy",
- "static_cell",
 ]
 
 [[package]]
@@ -4178,11 +4189,6 @@ version = "0.0.0"
 dependencies = [
  "ariel-os",
  "ariel-os-boards",
- "embassy-stm32",
- "embassy-sync 0.7.2",
- "embedded-hal-async",
- "lora-phy",
- "static_cell",
 ]
 
 [[package]]

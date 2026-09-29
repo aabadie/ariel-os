@@ -27,6 +27,7 @@ ariel-os-embassy = { workspace = true }
 ariel-os-hal = { workspace = true }
 ariel-os-identity = { workspace = true }
 ariel-os-log = { workspace = true }
+ariel-os-lora = { workspace = true, optional = true }
 ariel-os-macros = { workspace = true }
 ariel-os-nrf = { workspace = true, optional = true }
 ariel-os-power = { workspace = true }
@@ -190,6 +191,12 @@ ble-central = ["ariel-os-embassy/ble-central", "ble"]
 ble-peripheral = ["ariel-os-embassy/ble-peripheral", "ble"]
 # Selects static BLE address configuration for setting a static address at build.
 ble-config-static-address = ["ariel-os-embassy/ble-config-static-address"]
+
+# ## LoRa support
+# Enables LoRa radio support (`ariel_os::lora`); use the `lora` laze module to select it.
+lora = ["dep:ariel-os-lora", "external-interrupts", "spi", "time"]
+# Enables the sub-GHz radio of STM32WL MCUs; selected by the `lora-stm32wl` laze module.
+lora-stm32wl = ["ariel-os-lora?/stm32wl", "lora"]
 
 # ## Enables support for the nRF91xx SiP modem.
 nrf91-modem = ["ariel-os-embassy/nrf91-modem", "ariel-os-rt/nrf91-modem"]

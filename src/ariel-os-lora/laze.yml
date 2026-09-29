@@ -1,0 +1,30 @@
+modules:
+  - name: lora
+    help: LoRa radio support, see `ariel_os::lora`
+    selects:
+      # Ordered by priority. Exactly one module must provide `hw/lora`.
+      - ?lora-stm32wl
+      - ?lora-builtin
+      - hw/lora
+    env:
+      global:
+        FEATURES:
+          - ariel-os/lora
+
+  - name: lora-builtin
+    help: 'private: LoRa radio built into the board, use `lora` instead'
+    context:
+      - st-b-l072z-lrwan1
+    provides_unique:
+      - hw/lora
+
+  - name: lora-stm32wl
+    help: 'private: sub-GHz radio of STM32WL MCUs, use `lora` instead'
+    context:
+      - st-nucleo-wl55jc
+    provides_unique:
+      - hw/lora
+    env:
+      global:
+        FEATURES:
+          - ariel-os/lora-stm32wl

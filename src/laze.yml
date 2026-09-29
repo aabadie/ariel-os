@@ -6,6 +6,7 @@ subdirs:
   - ariel-os-embassy-common
   - ariel-os-identity
   - ariel-os-log
+  - ariel-os-lora
   - ariel-os-macros
   - ariel-os-nrf
   - ariel-os-rp

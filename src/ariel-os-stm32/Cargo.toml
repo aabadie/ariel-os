@@ -22,6 +22,8 @@ embassy-stm32 = { workspace = true, default-features = false, features = [
   "rt",
   "unstable-pac",
 ] }
+embassy-sync = { workspace = true, optional = true }
+embassy-time = { workspace = true, optional = true }
 embedded-hal-async = { workspace = true }
 embedded-io-async = { workspace = true, optional = true }
 paste = { workspace = true }
@@ -76,6 +78,9 @@ storage = ["dep:embassy-embedded-hal"]
 
 ## Enables USB support.
 usb = []
+
+## Enables access to the sub-GHz radio of STM32WL MCUs.
+lora-stm32wl = ["dep:embassy-sync", "dep:embassy-time", "time"]
 
 ethernet = []
 ethernet-stm32 = ["dep:embassy-embedded-hal", "ethernet"]
